@@ -1,9 +1,21 @@
-<script setup>
-import TheWelcome from '../components/TheWelcome.vue'
+<template>
+  <div class="home-container">
+    <ChatComponent />
+  </div>
+</template>
+
+<script>
+import ChatComponent from '../components/Chat.vue';
+
+export default {
+  components: {
+    ChatComponent,
+  },
+};
 </script>
 
-<template>
-  <main>
-    <TheWelcome />
-  </main>
-</template>
+<style scoped>
+.home-container {
+  @apply w-full h-full flex justify-center items-center;
+}
+</style>

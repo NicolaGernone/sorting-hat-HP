@@ -1,0 +1,16 @@
+[
+    {
+      "title": "¿Cuál es tu poción favorita?",
+      "answers": [
+        { "title": "Amor", "scores": { "Hufflepuff": 100 } },
+        { "title": "Gloria", "scores": { "Gryffindor": 100 } }
+      ]
+    },
+    {
+      "title": "¿Cuál es tu mascota favorita?",
+      "answers": [
+        { "title": "Lechuza blanca", "scores": { "Gryffindor": 25, "Ravenclaw": 50, "Hufflepuff": 50 } }
+      ]
+    }
+  ]
+  

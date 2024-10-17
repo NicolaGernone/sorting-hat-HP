@@ -36,3 +36,29 @@ a,
     padding: 0 2rem;
   }
 }
+
+.chat-container {
+  background-image: url('/assets/parchment.png');
+  background-size: cover;
+  font-family: 'Cinzel', serif;
+  height: 90vh;
+  width: 90vw; /* Pantalla más amplia */
+  padding: 20px;
+  border-radius: 10px;
+  overflow-y: auto;
+}
+
+.chat-message {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

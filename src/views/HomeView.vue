@@ -8,6 +8,7 @@
 import ChatComponent from '../components/Chat.vue';
 
 export default {
+  name: 'HomeView',
   components: {
     ChatComponent,
   },
@@ -17,5 +18,7 @@ export default {
 <style scoped>
 .home-container {
   @apply w-full h-full flex justify-center items-center;
+  background: url('/assets/parchment.png') no-repeat center center;
+  background-size: cover;
 }
 </style>

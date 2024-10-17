@@ -5,20 +5,18 @@
 </template>
 
 <script>
-import ChatComponent from '../components/Chat.vue';
+import ChatComponent from '../components/Chat.vue'
 
 export default {
   name: 'HomeView',
   components: {
-    ChatComponent,
-  },
-};
+    ChatComponent
+  }
+}
 </script>
 
 <style scoped>
 .home-container {
   @apply w-full h-full flex justify-center items-center;
-  background: url('/assets/parchment.png') no-repeat center center;
-  background-size: cover;
 }
 </style>

@@ -14,9 +14,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.home-container {
-  @apply w-full h-full flex justify-center items-center;
-}
-</style>

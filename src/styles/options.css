@@ -1,0 +1,25 @@
+.options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.option-button {
+    max-width: 60%;
+    padding: 10px 15px;
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1.2rem;
+    font-family: 'Cinzel', serif;
+    animation: slideIn 0.8s ease-out;
+    word-wrap: break-word;
+}
+
+.option-button:hover {
+    background-color: #2667a8;
+}

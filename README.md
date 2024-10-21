@@ -38,7 +38,7 @@ The app is built using **Vue.js** and can be run in development mode or deployed
    ```sh
    make dev
    ```
-   This will start the app locally on `http://localhost:3000`.
+   This will start the app locally on `http://localhost:5173`.
 
 ### Using Docker
 

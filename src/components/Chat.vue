@@ -1,11 +1,7 @@
 <template>
   <div class="chat-container">
     <div class="messages" ref="chatMessages" v-if="!houseResult">
-      <MessageComponent
-        v-for="(msg, index) in chatHistory"
-        :key="index"
-        :message="msg"
-      />
+      <MessageComponent v-for="(msg, index) in chatHistory" :key="index" :message="msg" />
       <OptionsComponent
         v-if="chatHistory[chatHistory.length - 1]?.isOptions"
         :options="chatHistory[chatHistory.length - 1].options"
@@ -22,17 +18,18 @@
 </template>
 
 <script>
-import chatService from '@/services/chatServices';
-import MessageComponent from '@/components/Message.vue';
-import OptionsComponent from '@/components/Options.vue';
-import '@/styles/chat.css';
+import chatServices from '@/services/chatServices'
+import MessageComponent from '@/components/Message.vue'
+import OptionsComponent from '@/components/Options.vue'
+import '@/styles/chat.css'
+import '@/styles/message.css';
 
 export default {
   name: 'ChatComponent',
   components: {
     MessageComponent,
-    OptionsComponent,
+    OptionsComponent
   },
-  mixins: [chatService],
-};
+  mixins: [chatServices]
+}
 </script>

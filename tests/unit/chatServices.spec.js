@@ -5,13 +5,11 @@ describe('chatService', () => {
   let serviceInstance;
 
   beforeEach(() => {
-    // Crear una nueva instancia de los métodos
     serviceInstance = {
       ...chatService.methods,
       ...chatService.data(),
     };
 
-    // Mock de scrollToBottom para evitar llamadas innecesarias durante las pruebas
     serviceInstance.scrollToBottom = vi.fn();
   });
 
@@ -41,7 +39,6 @@ describe('chatService', () => {
 
     serviceInstance.selectAnswer(selectedOption);
 
-    // Verificar que la opción seleccionada se haya agregado al historial de chat
     expect(serviceInstance.chatHistory).toEqual([
       { text: 'What would you choose?', isOptions: true },
       { text: 'Wisdom', user: true },
@@ -63,7 +60,6 @@ describe('chatService', () => {
 
     serviceInstance.selectAnswer({ title: 'Answer 1', scores: { g: 50 } });
 
-    // Verificar que la segunda pregunta se haya agregado al historial de chat
     expect(serviceInstance.chatHistory).toEqual([
       { text: 'First Question', isOptions: true },
       { text: 'Answer 1', user: true },
@@ -80,7 +76,6 @@ describe('chatService', () => {
     ];
     serviceInstance.selectAnswer({ title: 'Answer 1', scores: { g: 50 } });
 
-    // Verificar que se muestre el resultado final
     expect(serviceInstance.houseResult).toBe('You belong to Gryffindor');
   });
 
@@ -91,7 +86,6 @@ describe('chatService', () => {
 
     serviceInstance.resetChat();
 
-    // Verificar que todo ha sido reiniciado correctamente
     expect(serviceInstance.chatHistory).toEqual([]);
     expect(serviceInstance.scores).toEqual({
       Gryffindor: 0,

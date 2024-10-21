@@ -1,4 +1,5 @@
 import confetti from 'canvas-confetti';
+import { adjustBubbleWidth } from '@/utils/adjustBubbles';
 
 export default {
   data() {
@@ -25,7 +26,10 @@ export default {
       }
 
       this.chatHistory[this.chatHistory.length - 1].isOptions = false;
+
       this.chatHistory.push({ text: selectedOption.title, user: true });
+
+      this.adjustBubbles();
       this.scrollToBottom();
 
       setTimeout(() => {
@@ -42,6 +46,8 @@ export default {
           isOptions: true,
           options: this.questions[this.currentQuestion].answers,
         });
+
+        this.adjustBubbles();
         this.scrollToBottom();
       } else {
         this.showFinalResult();
@@ -52,8 +58,12 @@ export default {
       const sortedHouse = Object.keys(this.scores).reduce((a, b) =>
         this.scores[a] > this.scores[b] ? a : b
       );
+
       this.houseResult = `You belong to ${sortedHouse}`;
+
       this.triggerConfetti();
+
+      this.adjustBubbles();
       this.scrollToBottom();
     },
 
@@ -82,6 +92,15 @@ export default {
       });
     },
 
+    adjustBubbles() {
+      this.$nextTick(() => {
+        const messageElements = this.$refs.message;
+        if (Array.isArray(messageElements)) {
+          adjustBubbleWidth(messageElements);
+        }
+      });
+    },
+
     loadQuestions() {
       fetch('/assets/questions.json')
         .then((response) => response.json())
@@ -94,6 +113,8 @@ export default {
               isOptions: true,
               options: this.questions[0].answers,
             });
+
+            this.adjustBubbles();
             this.scrollToBottom();
           }
         });

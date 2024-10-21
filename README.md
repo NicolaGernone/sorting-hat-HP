@@ -25,7 +25,7 @@ The app is built using **Vue.js** and can be run in development mode or deployed
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/sorting-hat-app.git
+   git clone https://github.com/NicolaGernone/sorting-hat-HP.git
    cd sorting-hat-app
    ```
 
@@ -82,13 +82,10 @@ Here are some potential future improvements:
 
 The application uses **Docker** for ease of deployment. It leverages **Vue.js** to provide a dynamic, interactive interface with smooth animations and transitions. The production build is served using **Nginx** for high performance and scalability.
 
-If you're looking to extend or customize the app, the current architecture allows for easy integration of new features or additional questions.
-
-Feel free to open an issue or submit a pull request if you have any suggestions or improvements.
+If you're looking to extend or customize the app, the current architecture allows for easy integration of new features.
 
 ### Final Notes
 
 - This setup allows for **local development** with `npm` and **production deployment** with **Docker**.
 - The **`Makefile`** simplifies running the necessary Docker and npm commands, making it easy to manage the app.
-- The **`README.md`** provides clear instructions for running the app, both locally and in a Docker environment.
 
